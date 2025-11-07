@@ -1,0 +1,12 @@
+services:
+  lagrange-app:
+    build: .
+    image: 'javier200521/lagrange-app:latest'
+    ports:
+      - '8080:8080'
+    networks:
+      - red-backend-app
+
+networks:
+  red-backend-app:
+    driver: bridge
