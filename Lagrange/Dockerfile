@@ -10,6 +10,6 @@ COPY ${JAR_FILE} app.jar
 COPY src/main/resources/native/liblagrange.so /lib64/
 
 # Configurar path para librerías nativas
-ENV LD_LIBRARY_PATH=/usr/local/lib/jni:/lib64:$LD_LIBRARY_PATH
+ENV LD_LIBRARY_PATH=/usr/local/lib/jni:/lib64:LD_LIBRARY_PATH
 
 ENTRYPOINT ["java", "-jar", "/app.jar"]
